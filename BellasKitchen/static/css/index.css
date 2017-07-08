@@ -1,0 +1,260 @@
+@CHARSET "UTF-8";
+{% load static %}
+/****************************************************
+					Common
+*****************************************************/
+html, body{
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+}
+.header img{
+	position : absolute;
+	top : 30px;
+	left : 100px;
+	max-width : 13%;
+	height : auto;
+	width : auto\9;
+}
+.container{
+	width: 100%;
+}
+
+.bgcolor_darkgray{
+	background-color: #626263;
+}
+.bgcolor_gray{
+	background-color: #f1f1f1;
+}
+.bgcolor_orange{
+	background-color: #FF8D6A;
+}
+.bgcolor_mint{
+	background-color: #edfff4;
+}
+.bgcolor_yellow{
+	background-color: #feffe0;
+}
+
+h1{
+	font-family: 'Source Sans Pro', inherit;
+}
+h2, h3, h4, p{
+	font-family: 'Montserrat', inherit;
+}
+
+/****************************************************
+					Main1
+*****************************************************/
+.jumbotron{
+	margin-bottom: 0px;
+	background-color: #fff;	
+}
+
+.main_top{
+	width : 100%;
+	min-height : 500px;
+	height : 100%;
+	position : relative;
+	background-image: url("../image/header.jpg");
+	background-repeat: no-repeat;
+	background-position : 50% 60%;
+}
+
+.main_bottom{
+	width : 100%;
+	height : 700px;
+	position : relative;
+	background-color : #f1f1f1;
+	opacity: 0.8;
+}
+
+.main_top_txt{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+}
+
+.main_top_txt h1{
+	font-size : 45px;
+	font-weight: bold;
+}
+
+.main_top_txt h2{
+	margin-top : 30px;
+	font-size : 20px;
+}
+
+.btn_color_go_register{
+	background-color: #33BB77 !important;
+}
+
+.btn_color_go_register:hover{
+	background-color: #33BB77;
+	opacity: 0.8;
+}
+
+.btn_go_register{
+	margin-top:45px;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-size: large;
+	font-weight: bold;
+	width: 150px;
+	height: 40px;
+}
+
+/****************************************************
+					Main2
+*****************************************************/
+.why_bella{
+	height : auto;
+	padding-bottom: 3%;
+}
+.why_bella h1{
+	font-size : 3vw;
+	font-weight: bold;
+	color: #333333;
+}
+.why_bella h3{
+	font-size : 2vw;
+	color: #333333;
+}
+.why_bella p{
+	font-size : 1.3vw;
+	color: #333333;
+}
+.why_bella .container{
+	padding-top: 3%;
+}
+
+
+/****************************************************
+					bella_phelosophy
+*****************************************************/
+.bella_phelosophy{
+	height : auto;
+	padding-top: 3%;	
+	padding-bottom: 3%;	
+}
+
+.bella_phelosophy h1{
+	font-size : 3vw;
+	font-weight: bold;
+	color: #333333;
+}
+.bella_phelosophy h3{
+	font-size : 2vw;
+	color: #333333;
+}
+.bella_phelosophy p{
+	font-size : 1.3vw;
+	color: #333333;
+}
+
+/****************************************************
+					bella_review
+*****************************************************/
+.bella_review{
+	height : auto;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.bella_review h1{
+	font-size : 3vw;
+	font-weight: bold;
+	color: #333333;
+}
+.bella_review h3{
+	font-size : 2vw;
+	font-weight: bold;
+	color: #333333;
+}
+.bella_review p{
+	font-size : 1.3vw;
+	color: #333333;
+}
+fieldset {
+    display: block;
+    margin: 1.0em auto;
+    text-align: center;
+}
+label { margin: 0; padding: 0; }
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+.rating > label { 
+  color: #ebda01; 
+  float: center; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+/*
+.rating > input:checked + label:hover, 
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, 
+.rating > input:checked ~ label:hover ~ label { color: #FFD700;  } #FFED85
+*/
+
+
+/****************************************************
+					bottom_btn
+*****************************************************/
+
+.bottom_btn{
+	height : auto;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	vertical-align: middle;
+}
+.btn_register_bottom{
+	background-color: transparent;
+	border-color: #33BB77;
+	color: #33BB77;
+}
+.btn_register_bottom:hover{
+	background-color: #33BB77 !important;
+	color : #fff;
+}
+
+.btn_register_bottom{
+	width: 150px;
+	height: 40px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: large;
+	font-weight: bold;
+}
+
+/****************************************************
+					main_footer
+*****************************************************/
+
+.main_footer{
+	height : auto;
+	padding-top: 4%;
+	padding-bottom: 4%;
+	font-family: 'Montserrat', inherit;
+	font-size: 1vw;
+	line-height: 12mm;
+	color: #717171;
+}
+.business_info{
+	line-height: 5mm;
+}
+
+
+
+
+
