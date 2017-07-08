@@ -7,9 +7,9 @@
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 <link href='http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' rel='stylesheet' type='text/css'>
 <link href='{% static "css/index.css" %}' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="{% static "index.js" %}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{% static "js/index.js" %}"></script>
 <title>Bella's Kitchen</title>
 </head>
 <body>
