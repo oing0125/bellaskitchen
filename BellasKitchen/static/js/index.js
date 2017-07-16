@@ -3,5 +3,11 @@
  */
 
 $(function(){
-	alert('Welcome to BellasKitchen');
-})
+	fnAddEvent();
+});
+
+function fnAddEvent(){
+	$(".btn_go_register").click(function(){
+		window.location.href = "/register";
+	});
+}

@@ -3,6 +3,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" href="{% static "image/Favicon.png" %}" type="image/png"/>
+<link rel="shortcut icon" type="image/png" href="{% static "image/Favicon.png" %}"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 <link href='http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' rel='stylesheet' type='text/css'>
@@ -15,7 +17,7 @@
 <body>
 <div class="jumbotron text-center main_top">
 	<div class="header">
-		<img src="{% static "/image/White Logo.png" %}" class="img-rounded" alt="Bellas"/>
+		<img src="{% static "/image/White_Logo.png" %}" class="img-rounded" alt="Bellas"/>
 	</div>
 	<br/>
  <div class="main_top_txt">
