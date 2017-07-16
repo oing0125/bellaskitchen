@@ -3,7 +3,7 @@
  */
 
 $(function(){
-	fnInitLogin();
+	alert($("#name").val()+"으로 로그인");
 	fnAddEvent();
 });
 
@@ -15,38 +15,6 @@ function fnAddEvent(){
 	$(".go_home").click(function(){
 		window.location.href = "/";
 	})
-}
-
-function fnInitLogin(){
-	Kakao.init('ecda5c343523879374178baca1a11cbe');
-	var csrftoken = getCookie('csrftoken');;
-	Kakao.Auth.createLoginButton({
-      container: '#kakao-login-btn',
-      success: function(authObj) {
-    	  console.log(authObj);
-        $.ajax({
-        	type:'POST',
-        	url:'/login/',
-        	datatype : "json",
-        	data : authObj,
-        	beforeSend: function(xhr, settings) {
-                xhr.setRequestHeader("X-CSRFToken", csrftoken);
-            },
-        	success:function(data, status, xhr){
-        		alert(data);
-        	},
-        	error:function(xhr, status, error){
-        		alert("에러 발생");
-        		console.log(xhr);
-        		console.log(status);
-        		console.log(error);
-        	}
-        })
-      },
-      fail: function(err) {
-         alert(JSON.stringify(err));
-      }
-    });
 }
 
 //using jQuery

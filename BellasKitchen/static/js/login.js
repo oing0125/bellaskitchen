@@ -2,6 +2,7 @@
  * 
  */
 var csrftoken;
+var FB;
 $(function(){
 	csrftoken = getCookie('csrftoken');
 	fnInitLogin();
@@ -62,14 +63,76 @@ function fnAddEvent(){
         })
 	});
 	
+	$("#btnFbLogin").click(function(){
+		$.ajaxSetup({ cache: true });
+		  $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
+		    FB.init({
+		      appId: '122499071721803',
+		      version: 'v2.7' // or v2.1, v2.2, v2.3, ...
+		    });     
+		    $('#loginbutton,#feedbutton').removeAttr('disabled');
+		    FB.getLoginStatus(updateStatusCallback);
+		  });
+	});
+	
 	$(".go_home").click(function(){
 		window.location.href = "/";
 	})
 }
 
+function updateStatusCallback(response){
+	if (response.status === 'connected') {
+		response.authResponse.login_tp = 'fb';
+		$.ajax({
+        	type:'POST',
+        	url:'/login/',
+        	datatype : "json",
+        	data : response.authResponse,
+        	beforeSend: function(xhr, settings) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            },
+        	success:function(data, status, xhr){
+        		window.location.href = "/register";
+        	},
+        	error:function(xhr, status, error){
+        		alert("로그인 중 에러가 발생하였습니다.");
+        		window.location.href = "/";
+        	}
+        })
+	}else{
+		FB.login(function(response) {
+		    if (response.authResponse) {
+		     FB.api('/me', function(res) {
+		    	 res.login_tp = 'fb';
+	    	 $.ajax({
+    	        	type:'POST',
+    	        	url:'/login/',
+    	        	datatype : "json",
+    	        	data : res,
+    	        	beforeSend: function(xhr, settings) {
+    	                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+    	            },
+    	        	success:function(data, status, xhr){
+    	        		window.location.href = "/register";
+    	        	},
+    	        	error:function(xhr, status, error){
+    	        		alert("로그인 중 에러가 발생하였습니다.");
+    	        		window.location.href = "/";
+    	        	}
+    	        })
+		     });
+		    } else {
+		    	alert("로그인 중 에러가 발생하였습니다.");
+		    	window.location.href = "/";
+		    }
+		});
+	}
+}
+
 function fnInitLogin(){
+	
+	// Kakao Talk
 	Kakao.init('ecda5c343523879374178baca1a11cbe');
-	var csrftoken = getCookie('csrftoken');
 	Kakao.Auth.createLoginButton({
       container: '#kakao-login-btn',
       success: function(authObj) {
@@ -96,6 +159,15 @@ function fnInitLogin(){
     	 window.location.href = "/";
       }
     });
+}
+
+function fnCallbackNaverLogin(result){
+	if(result == 'success'){
+		window.location.href = "/register";
+	}else{
+		alert("로그인 중 에러가 발생하였습니다.");
+		window.location.href = "/";
+	}
 }
 
 //using jQuery

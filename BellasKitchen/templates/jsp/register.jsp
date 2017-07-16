@@ -16,6 +16,8 @@
 <title>Bella's Kitchen</title>
 </head>
 <body>
+<input type="hidden" name="name" id="name" value="{{ request.session.name }}"></input>
+<input type="hidden" name="login_tp" id="login_tp" value="{{ request.session.login_tp }}"></input>
 <div class="container header">
 	<div class="fl">
 		<img src="{% static "/image/White_Logo.png" %}" class="img-rounded go_home" alt="Bellas"/>

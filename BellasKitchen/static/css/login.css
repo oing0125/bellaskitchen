@@ -85,6 +85,38 @@ h2, h3, h4, p{
 	padding:30px 30px 30px 30px;
 }
 
+.btn_login{
+	margin-top: 20px;	
+}
+
+#btnFbLogin{
+	opacity:0.9;
+	border-radius: 0;
+	color : #FFFFFF !important;
+	background-color: #0f45af !important;
+	border-color: #0f45af !important;
+	box-sizing : border-box;
+	border: 1px solid;
+	text-alien:center;
+	display: inline-block;
+	padding : 0.3em 1.0em;
+	width : 220px;
+	height : 44px;
+	cursor: pointer;
+}
+#btnFbLogin:hover{
+	opacity:1	
+}	
+.naver_id_login{
+	opacity: 0.9
+}
+.naver_id_login:hover{
+	opacity: 1
+}
+#naver_id_login img{
+	width : 220px;
+	height : 44px;
+}
 .title{
 	font-size: 1.5em;
 	color: #4f4f4f;
