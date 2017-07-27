@@ -25,7 +25,7 @@ SECRET_KEY = '=pt6%1h9d(7s_fm%wx#p-^=lvr-w(#8v*z&%)$+m4$k%+q2se1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -49,12 +49,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
+
 ROOT_URLCONF = 'BellasKitchen.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['./BellasKitchen/BellasKitchen/templates'],
+        'DIRS': [PROJECT_PATH+'/../templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

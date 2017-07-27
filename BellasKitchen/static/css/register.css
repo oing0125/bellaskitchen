@@ -83,12 +83,144 @@ h2, h3, h4, p{
 *******************************************************/
 .register_main{
 	margin-top: 3%;
+	color: #9c9c9c;
+	font-size: 1.2em;
 }
 .register_main .title{
-	font-size: 1.5em;
-	color: #4f4f4f;
+}
+.register_content{
+	margin-top: 3%;
+}
+.register_content div{
+	margin-top: 1%;
+}
+.register_nm{
+	color : #FF8D6A;
+	font-size : 1.3em;
+	font-weight: bold;
+}
+input[type="text"]{
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-indent: 0px;
+	text-shadow: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+	-webkit-appearance:none;
+}
+.register_content .hidden_first{
+	display: none;
+}
+.register_content input[type="text"],input[type="number"]{
+	color : #FF8D6A;
+	margin: 0px 14px 0px 14px;
+	padding: 1px 1px 4px 4px;
+	padding-bottom: 6px;
+	border-width: 0;
+	border-bottom: 0.9px #919191 dotted;
+	outline:none;
+	box-shadow:none;
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
+}
+.register_content input:focus{
+	border-bottom: 0.9px #ffb099 dotted;
+}
+.register_content #txtDogNm{
+	width: 220px;
+}
+.register_content #txtDogAge{
+	width: 50px;
+}
+.register_content #txtDogSex{
+	width: 120px;
+}
+.register_content #txtDogWeight{
+	width: 90px;
+}
+.register_info_item{
+	margin-top: 4%;
 }
 
-.content{
-	margin-top: 3%;
+
+/* Dropdown Button */
+.drop_btn {
+    color: #FF8D6A;
+    font-size: 1.3em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    background-color : white;
+    border-bottom: 0.9px #ffb099 dotted;
+    outline:none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+	margin: 0px 14px 0px 14px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #999999;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ffdcd2}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .drop_btn {
+    background-color: #ffdcd2;
+}
+
+.select-arrow{
+	border-color:#999 transparent transparent;
+	border-style: solid;
+	border-width: 5px 5px 2.5px;
+	display: inline-block;
+	height:0;
+	width:0;
+	margin: 0px 0px 0px 5px;
+}
+
+.btn_rapper button{
+	margin-top: 30px;
+	opacity:0.9;
+	border-radius: 0;
+	color : #FFFFFF !important;
+	background-color: #33BB77 !important;
+	border-color: #33BB77 !important;
+	box-sizing : border-box;
+	border: 2px solid;
+	text-alien:center;
+	display: inline-block;
+	padding : 1em 1.75em;
+	width : 240px;
+	height : 54px;
+}
+
+.btn_rapper button:hover{
+	opacity: 0.7;	
 }
