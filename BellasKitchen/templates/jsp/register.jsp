@@ -11,6 +11,7 @@
 <link href='{% static "css/register.css" %}' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment-1.1.2.js"></script>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script type="text/javascript" src="{% static "js/register.js" %}"></script>
 <title>Bella's Kitchen</title>
@@ -78,11 +79,59 @@
 				</div>
 			</div>
 		</div>
-		<div class="btn_rapper hidden_first" id="nextDogWeight">
-			<button id="btnNonLogin">주문하기</button>
+		<div class="container text-center hidden_first nextDogWeight" id="food_info_area">
+			<label class="food_info_dtl">
+				<div class="food_img_area text-center">
+					<img src="{% static "/image/Cow_Black.svg" %}" class="title_img"/>
+					<img src="{% static "/image/Cow_Color.svg" %}" class="title_img_select hidden_first"/>
+				</div>
+				<div class="food_info_dtl_expl">
+					BEEF
+					<div class="food_info_dtl_ingredients">
+					밥<br/>
+					밥<br/>
+					밥<br/>
+					밥<br/>
+					</div>
+				</div>
+			</label>
+			<label class="food_info_dtl">
+				<div class="food_img_area text-center">
+					<img src="{% static "/image/Chicken_Black.svg" %}" class="title_img"/>
+					<img src="{% static "/image/Chicken_Color.svg" %}" class="title_img_select hidden_first"/>
+				</div>
+				<div class="food_info_dtl_expl">
+					Chicken
+					<div class="food_info_dtl_ingredients">
+					밥<br/>
+					밥<br/>
+					밥<br/>
+					밥<br/>
+					</div>
+				</div>
+			</label>
+			<label class="food_info_dtl">
+				<div class="food_img_area text-center">
+					<img src="{% static "/image/Lamb_Black.svg" %}" class="title_img"/>
+					<img src="{% static "/image/Lamb_Color.svg" %}" class="title_img_select hidden_first"/>
+				</div>
+				<div class="food_info_dtl_expl">
+					LAMB
+					<div class="food_info_dtl_ingredients">
+					밥<br/>
+					밥<br/>
+					밥<br/>
+					밥<br/>
+					</div>
+				</div>
+			</label>
+		</div>
+		<div class="btn_rapper hidden_first nextDogWeight" >
+			<button id="btn_order">주문하기</button>
 		</div>
 	</div>
-	
+<div class="container footer">
+</div>	
 </div>
 </body>
 </html>

@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^register/', views.register, name='register'),
     url(r'^login/', views.login, name="login"),
     url(r'^login_naver/', views.login_naver, name="login_naver"),
-    url(r'^logout/', views.logout, name="logout")
+    url(r'^logout/', views.logout, name="logout"),
+    url(r'^afterpay/', views.afterpay, name="afterpay")
 ]
