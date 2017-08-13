@@ -9,13 +9,14 @@ html, body{
 	margin:0;
 	padding:0;
 }
+.header{
+	max-width:1800px;
+}
 .header img{
-	position : absolute;
-	top : 30px;
-	left : 100px;
-	max-width : 13%;
-	height : auto;
-	width : auto\9;
+	float:left;
+	margin-top: 30px;
+	margin-left: 90px;
+	max-width : 150px;
 }
 .container{
 	width: 100%;
@@ -53,13 +54,10 @@ h2, h3, h4, p{
 }
 
 .main_top{
-	width : 100%;
-	min-height : 500px;
-	height : 100%;
-	position : relative;
+	max-width:1800px;
+	height : 700px;
 	background-image: url("../image/header.jpg");
 	background-repeat: no-repeat;
-	background-position : 50% 60%;
 }
 
 .main_bottom{
@@ -71,8 +69,7 @@ h2, h3, h4, p{
 }
 
 .main_top_txt{
-	position: relative;
-	top: 50%;
+	margin-top:350px;
 	transform: translateY(-50%);
 	color: white;
 }
@@ -111,19 +108,20 @@ h2, h3, h4, p{
 *****************************************************/
 .why_bella{
 	height : auto;
+	max-width:1800px;
 	padding-bottom: 3%;
 }
 .why_bella h1{
-	font-size : 3vw;
+	font-size : 30px;
 	font-weight: bold;
 	color: #333333;
 }
 .why_bella h3{
-	font-size : 2vw;
+	font-size : 20px;
 	color: #333333;
 }
 .why_bella p{
-	font-size : 1.3vw;
+	font-size : 13px;
 	color: #333333;
 }
 .why_bella .container{
@@ -136,57 +134,66 @@ h2, h3, h4, p{
 *****************************************************/
 .bella_phelosophy{
 	height : auto;
+	max-width:1800px;
 	padding-top: 3%;	
 	padding-bottom: 3%;	
 }
 
 .bella_phelosophy h1{
-	font-size : 3vw;
+	font-size : 30px;
 	font-weight: bold;
 	color: #333333;
 }
 .bella_phelosophy h3{
-	font-size : 2vw;
+	font-size : 20px;
 	color: #333333;
 }
 .bella_phelosophy p{
-	font-size : 1.3vw;
+	font-size : 15px;
 	color: #333333;
 }
-
+.bella_phelosophy .philosophy_left{
+	padding-left: 150px;
+	padding-right: 150px;
+}
+.bella_phelosophy .philosophy_right{
+	padding-right: 150px;
+	padding-left: 150px;
+}
 /****************************************************
 					bella_review
 *****************************************************/
 .bella_review{
 	height : auto;
+	max-width:1800px;
 	padding-top: 2%;
 	padding-bottom: 2%;
 }
 
 .bella_review h1{
-	font-size : 3vw;
+	font-size : 30px;
 	font-weight: bold;
 	color: #333333;
 }
 .bella_review h3{
-	font-size : 2vw;
+	font-size : 20px;
 	font-weight: bold;
 	color: #333333;
 }
 .bella_review p{
-	font-size : 1.3vw;
+	font-size : 13px;
 	color: #333333;
 }
 fieldset {
     display: block;
-    margin: 1.0em auto;
+    margin: 15px auto;
     text-align: center;
 }
 label { margin: 0; padding: 0; }
 .rating > input { display: none; } 
 .rating > label:before { 
   margin: 5px;
-  font-size: 1.25em;
+  font-size: 15px;
   font-family: FontAwesome;
   display: inline-block;
   content: "\f005";
@@ -215,6 +222,7 @@ label { margin: 0; padding: 0; }
 
 .bottom_btn{
 	height : auto;
+	max-width:1800px;
 	padding-top: 3%;
 	padding-bottom: 3%;
 	vertical-align: middle;
@@ -246,7 +254,7 @@ label { margin: 0; padding: 0; }
 	padding-top: 4%;
 	padding-bottom: 4%;
 	font-family: 'Montserrat', inherit;
-	font-size: 1vw;
+	font-size: 10px;
 	line-height: 12mm;
 	color: #717171;
 }

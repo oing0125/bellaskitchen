@@ -15,10 +15,10 @@
 <title>Bella's Kitchen</title>
 </head>
 <body>
-<div class="jumbotron text-center main_top">
-	<div class="header">
-		<img src="{% static "/image/White_Logo.png" %}" class="img-rounded" alt="Bellas"/>
-	</div>
+<div class="container text-center main_top">
+ <div class="header">
+  <img src="{% static "/image/White_Logo.png" %}" class="img-rounded" alt="Bellas"/>
+ </div>
 	<br/>
  <div class="main_top_txt">
   <h1>강아지 사료의 새로운 패러다임</h1>
@@ -55,22 +55,16 @@
 
 <div class="container bella_phelosophy">
  <div class="row">
- 	<div class="col-sm-1">
- 	</div>
- 	<div class="col-sm-1">
- 	</div>
-   <div class="col-sm-4 text_left">
- <h1>우리의 반려견도 건강한 음식을 먹는 행복을 누릴 권리가 있습니다.</h1>
+   <div class="col-sm-7 text-center philosophy_left">
+ 	<h1>우리의 반려견도 건강한 음식을 먹는 행복을 누릴 권리가 있습니다.</h1>
      <br/>
-     <p>사람들은 건강한 삶을 위해 신선한 음식을 골고루 섭취합니다.
+     <p>사람들은 건강한 삶을 위해 신선한 음식을 골고루 섭취합니다.<p/>
      	마찬가지로 반려견도 건강한 삶을 위해 그들의 생물학적 특성에 맞춘
      	신선하고 건강한 음식을 섭취할 방법이 필요합니다.</p>
      <p>하루 &#8361;4000이면 사랑하는 당신의 반려견에게 건강한 음식을 먹일 수 있습니다.</p>
    </div>
-   <div class="col-sm-5 text-center" style="padding-top: 4%;">
-   	<img src="{% static "/image/main_food.jpg" %}" class="img-rounded" alt="pet" width="304" height="256">
-   </div>
-   <div class="col-sm-1">
+   <div class="col-sm-5 text-left philosophy_right" style="padding-top: 15px;">
+	 <img src="{% static "/image/main_food.jpg" %}" class="img-rounded" alt="pet" width="304" height="256">
    </div>
  </div>
 </div>
@@ -125,7 +119,7 @@
 </div>
 
 <div class="container bottom_btn bgcolor_yellow text-center">
-  <button class="btn btn_register_bottom">Register Now</button>
+  <button class="btn btn_register_bottom btn_go_register">Register Now</button>
 </div>
 
 <div class="container main_footer text-center">
