@@ -3,9 +3,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="icon" href="{% static "
-	image/Favicon.png" %}" type="image/png" />
+<link rel="icon" href="{% static "image/Favicon.png" %}" type="image/png" />
 <link rel="shortcut icon" type="image/png" href="{% static " image/Favicon.png" %}"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=0, user-scalable=no, target-densitydpi=medium-dpi" />
 <link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro'	rel='stylesheet' type='text/css'>
 <link	href='http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'	rel='stylesheet' type='text/css'>
@@ -23,15 +23,35 @@
 			<img src="{% static "/image/White_Logo.png" %}" class="img-rounded go_home" alt="Bellas" />
 		</div>
 		<div class="fr">
-			<ul>
-				<li><a href="/">HOME</a></li> 
-				{% if request.session.is_login %}
-				<li class="logout_btn" style="display: none;"><a href="#">LOGOUT</a></li>
-				{% else %}
-				<li class="login_btn"><a href="#">LOGIN</a></li> 
-				{% endif %}
-				<li><a href="#">ABOUT</a></li>
-			</ul>
+			<div class="fr_menu_all">
+				<ul>
+					<li><a href="/">HOME</a></li> 
+					{% if request.session.is_login %}
+					<li class="logout_btn" style="display: none;"><a href="#">LOGOUT</a></li>
+					{% else %}
+					<li class="login_btn"><a href="#">LOGIN</a></li> 
+					{% endif %}
+					<li><a href="#">ABOUT</a></li>
+				</ul>
+			</div>
+			<div class="fr fr_menu_icon">
+				<div id='menu_icon'>•••</div> 
+			</div>
+		</div>
+	</div>
+	<div class="container menu_nav text-center hidden_first">
+		<div class="menu_nav_content">
+ 			<a href="/">HOME</a>
+		</div>
+		<div class="menu_nav_content">
+		{% if request.session.is_login %}
+			<a href="#" class="logout_btn" style="display: none;">LOGOUT</a>
+		{% else %}
+			<a href="#" class="login_btn">LOGIN</a>
+		{% endif %}
+		</div>
+		<div class="menu_nav_content">
+			<a href="#">ABOUT</a>
 		</div>
 	</div>
 	<div class="container register_main">

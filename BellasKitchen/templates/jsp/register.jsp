@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="icon" href="{% static "image/Favicon.png" %}" type="image/png"/>
 <link rel="shortcut icon" type="image/png" href="{% static "image/Favicon.png" %}"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=0, user-scalable=no, target-densitydpi=medium-dpi" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 <link href='http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' rel='stylesheet' type='text/css'>
@@ -19,22 +20,36 @@
 <body>
 <input type="hidden" name="name" id="name" value="{{ request.session.name }}"></input>
 <input type="hidden" name="login_tp" id="login_tp" value="{{ request.session.login_tp }}"></input>
-<div class="container header">
-	<div class="fl">
-		<img src="{% static "/image/White_Logo.png" %}" class="img-rounded go_home" alt="Bellas"/>
+	<div class="container header">
+		<div class="fl">
+			<img src="{% static "/image/White_Logo.png" %}" class="img-rounded go_home" alt="Bellas" />
+		</div>
+		<div class="fr">
+			<div class="fr_menu_all">
+				<ul>
+					<li><a href="/">HOME</a></li> 
+					<li class="logout_btn"><a href="/logout">LOGOUT</a></li>
+					<li><a href="#">ABOUT</a></li>
+				</ul>
+			</div>
+			<div class="fr fr_menu_icon">
+				<div id='menu_icon'>•••</div> 
+			</div>
+		</div>
 	</div>
-	<div class="fr">
-		<ul>
-		  <li><a href="/">HOME</a></li>
-		  {% if request.session.is_login %}
-		  <li class="logout_btn"><a href="/logout">LOGOUT</a></li>
-		  {% else %}
-		  <li class="login_btn"><a href="/login">LOGIN</a></li>
-		  {% endif %}
-		  <li><a href="#">ABOUT</a></li>
-		</ul>
+	
+	<div class="container menu_nav text-center hidden_first">
+		<div class="menu_nav_content">
+ 			<a href="/">HOME</a>
+		</div>
+		<div class="menu_nav_content">
+			<a href="/logout" class="logout_btn">LOGOUT</a>
+		</div>
+		<div class="menu_nav_content">
+			<a href="#">ABOUT</a>
+		</div>
 	</div>
-</div>
+
 <div class="container register_main text-center">
 	<span class="register_nm">{{ request.session.name }}</span> 님의 강아지를 소개해주세요.
 	<div class="register_content">

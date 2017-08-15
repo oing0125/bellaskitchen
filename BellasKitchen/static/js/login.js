@@ -77,7 +77,14 @@ function fnAddEvent(){
 	
 	$(".go_home").click(function(){
 		window.location.href = "/";
-	})
+	});
+	$("#menu_icon").click(function(){
+		if($(".menu_nav").css("display")=='none'){
+			$(".menu_nav").show();
+		}else{
+			$(".menu_nav").hide();
+		}
+	});
 }
 
 function updateStatusCallback(response){
