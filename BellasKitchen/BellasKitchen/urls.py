@@ -20,5 +20,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'', include('bella.urls')),
-    url(r'^admin/', admin.site.urls),
+    url(r'^djangoadmin/', admin.site.urls),
+    url(r'^admin/', include('admin.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

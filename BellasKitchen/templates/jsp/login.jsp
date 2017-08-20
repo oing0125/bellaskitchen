@@ -27,11 +27,12 @@
 				<ul>
 					<li><a href="/">HOME</a></li> 
 					{% if request.session.is_login %}
+					<li class="mypage_btn"><a href="/mypage">MY PAGE</a></li>
+					<li class="order_btn"><a href="/register">ORDER</a></li>
 					<li class="logout_btn" style="display: none;"><a href="#">LOGOUT</a></li>
 					{% else %}
 					<li class="login_btn"><a href="#">LOGIN</a></li> 
 					{% endif %}
-					<li><a href="#">ABOUT</a></li>
 				</ul>
 			</div>
 			<div class="fr fr_menu_icon">
@@ -45,13 +46,12 @@
 		</div>
 		<div class="menu_nav_content">
 		{% if request.session.is_login %}
+			<a href="#" class="mypage_btn">MY PAGE</a>
+			<a href="#" class="order_btn">ORDER</a>
 			<a href="#" class="logout_btn" style="display: none;">LOGOUT</a>
 		{% else %}
 			<a href="#" class="login_btn">LOGIN</a>
 		{% endif %}
-		</div>
-		<div class="menu_nav_content">
-			<a href="#">ABOUT</a>
 		</div>
 	</div>
 	<div class="container register_main">
@@ -135,5 +135,18 @@
 				</div>
 			</div>
 		</div>
+<div class="container main_footer text-center">
+ <div class="container">
+ 	CONTACT&nbsp;&nbsp;&nbsp;이용약관&nbsp;&nbsp;&nbsp;개인정보처리방침
+ </div>
+ <div class="container business_info">
+ 	상호명:Bella's Kitchen | 대표 : 박타미 | 개인정보관리책임자 : 박타미 | 전화 : 01032761810 | 이메일 : hello@bellaskitchen.co.kr
+ 	<br/>
+ 	주소 : 서울특별시 용산구 이태원동 212-38 | 사업자등록번호 : - | 통신판매 : -
+ </div>
+ <div class="container">
+ 	OUR FOOD IS MADE WITH ♥ IN SEOUL
+ </div>
+</div>
 </body>
 </html>

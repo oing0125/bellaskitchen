@@ -88,6 +88,13 @@ def register(request):
         return render(request, 'jsp/register.jsp')
     else :
         return render(request, 'jsp/login.jsp')
+    
+def mypage(request):
+    session = request.session
+    if 'is_login' in session:
+        return render(request, 'jsp/mypage.jsp')
+    else :
+        return render(request, 'jsp/login.jsp')
 
 def afterpay(request):
     return render(request, 'jsp/pay_success.jsp')

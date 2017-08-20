@@ -115,6 +115,7 @@ h2, h3, h4, p{
 	margin-top: 3%;
 	color: #9c9c9c;
 	font-size: 1.2em;
+	min-height: 300px;
 }
 .register_main .title{
 }
@@ -395,6 +396,20 @@ input[type=checkbox]{
 }
 
 
+/******************************************************
+					Footer
+*******************************************************/
 .footer{
 	height: 30px;
+}
+.main_footer{
+	height : auto;
+	padding-top: 4%;
+	font-family: 'Montserrat', inherit;
+	font-size: 10px;
+	line-height: 12mm;
+	color: #717171;
+}
+.business_info{
+	line-height: 5mm;
 }
